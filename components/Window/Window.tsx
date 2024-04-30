@@ -12,8 +12,6 @@ const Window: FC<WindowProps> = ({ title, code, language }) => {
   code = code ? code : 'No code provided'
   language = language ? language : 'html'
   
-  console.log(language)
-
   return(
     <div className='flex basis-full flex-col bg-black border-solid border border-slate-800 rounded-lg'>
       <div className='flex flex-row items-center border-solid border-b border-slate-800 p-2'>
