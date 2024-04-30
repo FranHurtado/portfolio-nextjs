@@ -1,12 +1,13 @@
 import styles from './NavBar.module.scss';
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon, BellIcon } from "@heroicons/react/16/solid";
-import { FC, Fragment } from "react";
+import { FC } from "react";
 
 const navigation = [
   { name: 'About', href: '#about', current: false },
   { name: 'Projects', href: '#projects', current: false },
-  { name: 'Skills', href: '#skills', current: false },
+  { name: 'Experience', href: '#experience', current: false },
+  { name: 'Education', href: '#education', current: false },
 ]
 
 interface NavBarProps {}
@@ -46,7 +47,7 @@ const NavBar: FC<NavBarProps> = ({}) => {
                         className={(
                           item.current ? 'bg-gray-900 text-orange-500 ' : 'text-gray-300 hover:text-orange-500 '
                           ) + 
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'text-xl rounded-md px-3 py-2 text-sm font-medium'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
