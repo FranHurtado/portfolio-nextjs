@@ -5,9 +5,8 @@ import { FC } from "react";
 
 const navigation = [
   { name: 'About', href: '#about', current: false },
-  { name: 'Projects', href: '#projects', current: false },
   { name: 'Experience', href: '#experience', current: false },
-  { name: 'Education', href: '#education', current: false },
+  { name: 'Projects', href: '#projects', current: false },
 ]
 
 interface NavBarProps {}
