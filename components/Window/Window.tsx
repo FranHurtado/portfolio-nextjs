@@ -5,12 +5,16 @@ import { Highlight, themes } from "prism-react-renderer"
 interface WindowProps {
   title: string,
   code: string,
-  language: string
+  language: string,
+  titleClass?: string,
+  codeClass?: string
 }
 
-const Window: FC<WindowProps> = ({ title, code, language }) => {
+const Window: FC<WindowProps> = ({ title, code, language, titleClass, codeClass }) => {
   code = code ? code : 'No code provided'
-  language = language ? language : 'html'
+  language = language ? language : 'html',
+  codeClass = codeClass ? codeClass : 'text-sm'
+  titleClass = titleClass ? titleClass : 'text-sm'
   
   return(
     <div className='flex basis-full flex-col bg-black border-solid border border-slate-800 rounded-lg'>
@@ -18,9 +22,9 @@ const Window: FC<WindowProps> = ({ title, code, language }) => {
         <span className={`${styles['btnWindow']} bg-red-600 mx-1`}></span>
         <span className={`${styles['btnWindow']} bg-orange-300 mx-1`}></span>
         <span className={`${styles['btnWindow']} bg-green-600 mx-1`}></span>
-        <span className='text-sm text-slate-400 mx-auto'>{ title }</span>
+        <span className={`text-slate-400 mx-auto ${titleClass}`}>{ title }</span>
       </div>
-      <div className='text-sm p-4'>
+      <div className={`p-4 ${codeClass}`}>
         <Highlight
         theme={themes.synthwave84}
         code={code}
