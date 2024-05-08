@@ -11,7 +11,7 @@ const AboutMe: FC<AboutMeProps> = ({ title, text }) => {
   return(
     <div className='flex flex-col md:flex-row'>
       <div className='w-full md:w-8/12 my-6 md:pe-20 text-center md:text-left'>
-        <h2 className='text-2xl font-bold uppercase text-orange-500 mb-8'>{title}</h2>
+        <h2 className='text-3xl font-bold uppercase text-orange-500 mb-8'>{title}</h2>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: text }}></div>
       </div>
       
