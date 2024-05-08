@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="w-full p-16 md:p-32 bg-gradient-to-r from-slate-900 to-slate-800">
+        <div className="w-full p-16 md:p-32 bg-gradient-to-r from-slate-900 to-slate-800" id="about">
           <AboutMe 
             title="Who is Fran?" 
             text="I am a versatile full-stack developer specializing in freelance work. Throughout my career, I have been dedicated to assisting startups in bringing their ideas to life on the internet. My expertise spans a wide range of services, from creating robust hosting infrastructures to complete project development, providing valuable experience across various technologies.<br><br>
@@ -103,14 +103,14 @@ export default function Home() {
         </div>
         
         
-        <div className="w-full p-32 px-16 lg:px-24">
+        <div className="w-full p-32 px-16 lg:px-24" id="experience">
           <Experience 
             title="Work experience"
             experiences={experiences}
           />
         </div>
         
-        <div className="relative w-full p-32 px-8 lg:px-24 bg-white z-0">
+        <div className="relative w-full p-32 px-8 lg:px-24 bg-white z-0" id="projects">
           <div className="z-10">
             <Projects 
               title="Projects"
