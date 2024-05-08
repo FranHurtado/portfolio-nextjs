@@ -15,8 +15,8 @@ const Footer: FC<FooterProps> = ({}) => {
       </div>
       
       <div className='w-6/12 flex flex-row justify-end'>
-        <a href="" target='_blank' className='mx-2'><Linkedin width="32" /></a>
-        <a href="" target='_blank' className='mx-2'><Github width="32" /></a>
+        <a href="https://www.linkedin.com/in/fhurtado/?locale=en_US" target='_blank' className='mx-2'><Linkedin width="32" /></a>
+        <a href="https://github.com/FranHurtado" target='_blank' className='mx-2'><Github width="32" /></a>
       </div>
     </div>
   )
