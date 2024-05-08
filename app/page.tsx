@@ -3,16 +3,19 @@ import NavBar from "@/components/NavBar/NavBar";
 import Window from "@/components/Window/Window";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Experience from "@/components/Experience/Experience";
-import Image from "next/image";
 import React from "react";
 
 import persona from "@/app/data/persona";
+import myProjects from "@/app/data/projects";
 import JavascriptIcon from "@/components/icons/JavaScriptIcon";
 import TypescriptIcon from "@/components/icons/TypeScriptIcon";
 import NodeJSIcon from "@/components/icons/NodeJSIcon";
 import MongoDBIcon from "@/components/icons/MongoDBIcon";
 import ReactIcon from "@/components/icons/ReactIcon";
 import AwsIcon from "@/components/icons/AwsIcon";
+import TechBackground from "@/components/icons/TechBackground";
+import Projects from "@/components/Projects/Projects";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   let experiences: { title: string, duration: string, description?: string}[] = 
@@ -40,8 +43,8 @@ export default function Home() {
       
       <main className="flex flex-col items-center">
         
-        <div className="w-full p-24">
-          <div className="relative items-center grid grid-cols-1 lg:grid-cols-2 before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:indigo-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+        <div className="w-full p-32 px-16 lg:px-24">
+          <div className="relative items-center grid grid-cols-1 lg:grid-cols-2  bg-gradient-radial from-gray-900 to-black-900">
             <div className="w-full lg:w-12/12 my-6">
               <Window 
               title={'persona.jsx'} 
@@ -53,7 +56,7 @@ export default function Home() {
                 Hello, <br />my name is <span className="text-slate-600">Fran</span> <span className="text-orange-500">Hurtado</span> and I'm a <span className="text-sky-600">Fullstack Developer</span> Freelance
               </p>
               
-              <div className="flex w-full my-8">
+              <div className="flex flex-row w-full my-8">
                 <div className="w-2/12 px-4">
                   { <JavascriptIcon /> }
                 </div>
@@ -82,7 +85,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="w-full p-24 bg-slate-800">
+        <div className="w-full p-16 md:p-32 bg-gradient-to-r from-slate-900 to-slate-800">
           <AboutMe 
             title="Who is Fran?" 
             text="I am a versatile full-stack developer specializing in freelance work. Throughout my career, I have been dedicated to assisting startups in bringing their ideas to life on the internet. My expertise spans a wide range of services, from creating robust hosting infrastructures to complete project development, providing valuable experience across various technologies.<br><br>
@@ -100,13 +103,26 @@ export default function Home() {
         </div>
         
         
-        <div className="w-full py-24">
+        <div className="w-full p-32 px-16 lg:px-24">
           <Experience 
             title="Work experience"
             experiences={experiences}
           />
         </div>
+        
+        <div className="relative w-full p-32 px-8 lg:px-24 bg-white z-0">
+          <div className="z-10">
+            <Projects 
+              title="Projects"
+              projects={myProjects}
+            />
+          </div>
+          
+          <TechBackground className="absolute bottom-0 left-0 h-[97%] -z-10 opacity-20" />
+        </div>
       </main>
+      
+      <Footer />
     </React.Fragment>
     );
 }
