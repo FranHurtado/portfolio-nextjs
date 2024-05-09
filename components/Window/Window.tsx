@@ -24,7 +24,7 @@ const Window: FC<WindowProps> = ({ title, code, language, titleClass, codeClass 
         <span className={`${styles['btnWindow']} bg-green-600 mx-1`}></span>
         <span className={`text-slate-400 mx-auto ${titleClass}`}>{ title }</span>
       </div>
-      <div className={`p-4 ${codeClass}`}>
+      <div className={`p-4 ${styles['codeWindow']} ${codeClass}`}>
         <Highlight
         theme={themes.synthwave84}
         code={code}

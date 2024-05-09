@@ -1,11 +1,25 @@
 .list{
   ul{
-    list-style-type: disc;
-    padding-left: 0.85em;
+    list-style-type: none;
+    padding-left: 0;
     
     li{
-      margin: 0.6em 0;
-      text-align: justify !important;
+      margin: 1em 0;
+      text-align: center !important;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .list{
+    ul{
+      list-style-type: disc;
+      padding-left: 0.85em;
+      
+      li{
+        margin: 1em 0;
+        text-align: left !important;
+      }
     }
   }
 }
