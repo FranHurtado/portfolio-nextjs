@@ -18,11 +18,11 @@ const Window: FC<WindowProps> = ({ title, code, language, titleClass, codeClass 
   
   return(
     <div className='flex basis-full flex-col bg-black border-solid border border-slate-800 rounded-lg'>
-      <div className='flex flex-row items-center border-solid border-b border-slate-800 p-2'>
+      <div className='flex flex-row items-center border-solid border-b border-slate-800 p-4 px-2'>
         <span className={`${styles['btnWindow']} bg-red-600 mx-1`}></span>
         <span className={`${styles['btnWindow']} bg-orange-300 mx-1`}></span>
         <span className={`${styles['btnWindow']} bg-green-600 mx-1`}></span>
-        <span className={`text-slate-400 mx-auto ${titleClass}`}>{ title }</span>
+        <span className={`text-slate-400 mx-auto pe-6 ${titleClass}`}>{ title }</span>
       </div>
       <div className={`p-4 ${styles['codeWindow']} ${codeClass}`}>
         <Highlight

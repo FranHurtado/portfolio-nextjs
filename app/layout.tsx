@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
-  description: "Custom developer portfolio created with NextJS",
+  title: "Fran Hurtado Developer Portfolio",
+  description: "Hello, my name is Fran Hurtado and I'm a Fullstack Developer Freelance. Frontend and Backend projects from the scratch. Startup counselor",
 };
 
 export default function RootLayout({

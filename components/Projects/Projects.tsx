@@ -26,9 +26,9 @@ const Projects: FC<ProjectsProps> = ({ title, projects }) => {
         <div className='w-full lg:w-1/12'></div>
         
         <div className='flex flex-col w-full lg:w-6/12 xl:w-5/12 my-6 px-4 lg:px-0 justify-center items-center'>
-          { projects.map(project => {
+          { projects.map((project, key) => {
             return(
-              <div className='w-full mb-8 sticky top-24'>
+              <div className='w-full mb-8 sticky top-24' key={key}>
                 <Window 
                   title={project.title} 
                   code={project.content}
